@@ -4,7 +4,7 @@
 
 This project simulates a core task for a Financial Planning & Analysis (FP&A) or investment analyst at a real estate private equity firm.
 
-**Fictional Context:** As an analyst for **"Summit Real Estate Partners,"** I was tasked with evaluating a potential acquisition: "West Ridge North," an 80-unit apartment community. The objective was to build a comprehensive 10-year pro forma financial model to determine the project's financial viability and potential returns.
+**Context:** As an analyst for **"Summit Real Estate Partners,"** I was tasked with evaluating a potential acquisition: "West Ridge North," an 80-unit apartment community. The objective was to build a comprehensive 10-year pro forma financial model and an executive-level Power BI dashboard to determine the project's financial viability and communicate the findings effectively.
 
 **Stakeholders:** The analysis and recommendations are prepared for Summit's Investment Committee, which includes the Chief Financial Officer (CFO) and Managing Partners.
 
@@ -16,20 +16,27 @@ The analysis strongly supports proceeding with the acquisition of the West Ridge
 
 The project generates a **Net Present Value (NPV) of $7.39 million**, indicating substantial value creation. Sensitivity and scenario analyses reveal that while the investment's profitability is sensitive to initial rent levels and annual rent growth, it remains profitable even under more conservative assumptions. The primary recommendation is to move forward with deeper due diligence, focusing on validating market rent comparables and the operational plan to increase occupancy to 95% within the first two years.
 
+## Interactive Power BI Dashboard
+
+To provide a high-level executive summary of the investment, I developed an interactive Power BI dashboard. This dashboard visualizes the key findings from the Excel model, focusing on core profitability metrics, projected cash flows, and scenario outcomes.
+
+![West Ridge North Dashboard Demo](./Real-Estate-Dashboard-Demo.gif)
+
+**Key Features of the Dashboard:**
+*   **Executive KPIs:** At-a-glance cards for IRR, NPV, and ROI provide an immediate understanding of the project's value.
+*   **Net Operating Income Trend:** A column chart clearly shows the negative NOI during the initial stabilization period, followed by steady year-over-year growth.
+*   **Scenario Comparison:** A simple bar chart compares the base case ("Expected Rent") against the optimistic "High Rent" scenario, quantifying potential upside.
+*   **Actionable Recommendation:** A summary text box provides the final, data-driven recommendation for stakeholders.
+
 ## Tools & Technologies
 
-*   **Primary Tool:** Microsoft Excel
-*   **Key Excel Functions & Features:**
-    *   Dynamic 10-Year Pro Forma Cash Flow Modeling
-    *   `NPV`, `IRR`, `XNPV`, and `XIRR` functions for investment valuation
-    *   Two-Variable Data Tables for **Sensitivity Analysis**
-    *   **Scenario Manager** for comparing base-case vs. optimistic outcomes
-    *   Advanced logical functions (`IF`, Nested `IF`s)
-    *   Data structuring and professional formatting
+*   **Modeling:** Microsoft Excel
+*   **Visualization & Dashboarding:** Power BI
+*   **Key Skills:** Financial Modeling, Discounted Cash Flow (DCF) Valuation, IRR/NPV Analysis, Scenario & Sensitivity Analysis, Data Visualization, Executive Reporting.
 
 ## Model Structure & Methodology
 
-The analysis is built on a 10-year discounted cash flow (DCF) model structured to professional standards.
+The analysis is built on a 10-year discounted cash flow (DCF) model in Excel, with the outputs feeding the Power BI dashboard.
 
 1.  **Inputs & Assumptions:** A centralized section captures all key drivers, including acquisition details (Purchase Price, Cap Rate), operational assumptions (Rent Growth, Cost Growth), and sale details (Holding Period, Exit Cap Rate). This allows for easy modification and stress-testing.
 
@@ -53,8 +60,6 @@ The primary analysis confirms this is a highly attractive investment opportunity
 *   **Internal Rate of Return (IRR):** The projected **`IRR` of 29.78%** is well above the 20% benchmark rate, indicating the project's returns are more than sufficient to compensate for the risk involved.
 *   **Net Present Value (NPV):** With a discount rate of 20%, the project yields a positive **`NPV` of $7.39 million**. This means the present value of all future cash inflows exceeds the initial investment by over $7M, representing direct value creation for the firm.
 
-
-
 ### 2. Sensitivity to Market Conditions
 
 A two-variable data table was created to analyze how the Year 10 Net Operating Income (a key driver of sale price) changes based on two critical assumptions: **Initial Monthly Rent** and **Annual Rent Growth %**.
@@ -62,15 +67,11 @@ A two-variable data table was created to analyze how the Year 10 Net Operating I
 *   **Key Finding:** The model is highly sensitive to these two inputs. The base case projects a Year 10 NOI of **$2.95M** (with 5.00% growth and $2,300 starting rent).
 *   **Impact Example:** If the annual rent growth is only 2.50% instead of 5.00%, the Year 10 NOI would fall to **$2.59M** (assuming $2,500 starting rent), a decrease of over 20% from the equivalent 5.00% growth scenario ($3.25M). This highlights the critical importance of validating long-term market growth projections.
 
- 
-
 ### 3. Scenario Planning: "Expected" vs. "High Rent"
 
 Excel's Scenario Manager was used to compare the base case ("Expected Rent") with a more optimistic "High Rent" scenario (8.00% rent growth and $2,500 starting rent).
 
 *   **Key Finding:** The "High Rent" scenario results in a Year 10 NOI of **$4.21 million**, a **42% increase** over the base case NOI of $2.95 million. This demonstrates the significant upside potential if market conditions are more favorable than initially projected.
-
- 
 
 ## Strategic Recommendations
 
@@ -80,7 +81,11 @@ Based on the financial model and analysis, the following recommendations are pre
 2.  **Conduct Rigorous Due Diligence on Rent Assumptions:** Given the model's sensitivity to rent growth and initial rent levels, the next phase should focus on validating these assumptions through third-party market reports and analysis of comparable properties.
 3.  **Validate the Operational Turnaround Plan:** The model assumes occupancy increases from 75% to a stabilized 95% after the Year 1 renovations. The operational team's plan to achieve this should be scrutinized to ensure it is realistic and achievable within the projected timeframe.
 
-## Links to Work
+## Links to Project Files
 
-*   [**Excel Model File 1:** Pro Forma with Sensitivity & Scenario Analysis](./Model%20with%20scenario%20and%20sensitivity.xlsx)
-*   [**Excel Model File 2:** NPV & IRR Valuation Analysis](./NPV,%20IRR,%20XIRR,%20XNPV.xlsx)
+*   [**Excel Model 1:** Pro Forma with Sensitivity & Scenario Analysis](./Model%20with%20scenario%20and%20sensitivity.xlsx)
+*   [**Excel Model 2:** NPV & IRR Valuation Analysis](./NPV,%20IRR,%20XIRR,%20XNPV.xlsx)
+*   [**Power BI Data Source:** Cleaned Data for Visualization](./Power%20BI%20Data.xlsx)
+*   [**Interactive Power BI Dashboard File**](./Dashboard.pbix)
+
+*(Note: The interactive dashboard requires Microsoft Power BI Desktop to view. The dashboard's key insights are showcased in the GIF above for quick viewing.)*
